@@ -6,13 +6,11 @@ public class Program
     {
         Console.WriteLine("Bienvenue dans le chiffrement et déchiffrement du chiffrement de Vigenère");
 
-        // Menu principal
         Console.WriteLine("Menu principal");
         Console.WriteLine("1- Crypter un message");
         Console.WriteLine("2- Décrypter un message");
         Console.Write("Merci de rentrer votre choix [1,2]: ");
 
-        // Lire le choix de l'utilisateur
         int choix;
         while (!int.TryParse(Console.ReadLine(), out choix) || (choix != 1 && choix != 2))
         {
@@ -20,7 +18,6 @@ public class Program
             Console.Write("Merci de rentrer votre choix [1,2]: ");
         }
 
-        // Traiter le choix de l'utilisateur
         switch (choix)
         {
             case 1:
@@ -32,7 +29,6 @@ public class Program
         }
     }
 
-    // Méthode pour crypter un message
     public static void CrypterMessage()
     {
         Console.WriteLine("Cryptage d'un message");
@@ -45,7 +41,6 @@ public class Program
         Console.WriteLine("Message crypté : " + messageCrypte);
     }
 
-    // Méthode pour décrypter un message
     public static void DecrypterMessage()
     {
         Console.WriteLine("Décryptage d'un message");
@@ -58,7 +53,6 @@ public class Program
         Console.WriteLine("Message décrypté : " + messageDecrypte);
     }
 
-    // Méthode pour chiffrer un message avec le chiffre de Vigenère
     public static string ChiffrerVigenere(string message, string cle)
     {
         string messageCrypte = "";
@@ -83,7 +77,6 @@ public class Program
         return messageCrypte;
     }
 
-    // Méthode pour déchiffrer un message avec le chiffre de Vigenère
     public static string DechiffrerVigenere(string messageCrypte, string cle)
     {
         string messageDecrypte = "";
